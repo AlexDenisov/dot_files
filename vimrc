@@ -27,7 +27,8 @@
  Bundle 'cocoa.vim'
  Bundle 'kiwi.vim'
  Bundle 'bbommarito/vim-slim'
- Bundle 'Lokaltog/powerline'
+ Bundle 'clang-complete'
+ Bundle 'eraserhd/vim-ios'
 
 filetype plugin indent on
 
@@ -97,4 +98,10 @@ map <tab> <C-w><C-w>
    autocmd!
    autocmd BufWritePre * if expand("<afile>")!~#'^\w\+:/' && !isdirectory(expand("%:h")) | execute "silent! !mkdir -p ".shellescape(expand('%:h'), 1) | redraw! | endif
  augroup END
+
+ " map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+ "
+ 
+ nmap <silent> <C-N> :cn<CR>zv
+ nmap <silent> <C-B> :cp<CR>zv
 

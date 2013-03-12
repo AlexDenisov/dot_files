@@ -22,3 +22,4 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 
 export PAGER="most"
 
+source ~/perl5/perlbrew/etc/bashrc
