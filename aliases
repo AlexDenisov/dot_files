@@ -2,7 +2,7 @@
 
 alias pro='cd ~/Projects'
 alias ios='cd ~/Projects/iOS'
-alias t='cd /tmp'
+alias tmp='cd /tmp'
 alias vt='cd /var/tmp'
 alias snip='~/Library/Developer/Xcode/UserData/CodeSnippets'
 alias snippets_sync='~/Library/Developer/Xcode/UserData/CodeSnippets && git add . && git commit -am "snippets added" && git pull origin master && git push origin master; cd $OLDPWD'
@@ -40,13 +40,8 @@ function add_alias() {
   fi
 }
 
-# Browser helpers
-
-alias sfredmine='open https://dev.stanfy.com/redmine/projects'
-alias sfbulktime='open https://dev.stanfy.com/redmine/bulk_time_entries'
-alias sfgitlab='open https://dev.stanfy.com/gitlab'
-alias sfjenkins='open https://dev.stanfy.com/jenkins'
-
 function search_repo() {
  open "https://github.com/search?q=$1&type=Repositories"
 }
+
+pretty() { pygmentize -f terminal "$1" | less -R }

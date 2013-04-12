@@ -29,6 +29,8 @@
  Bundle 'bbommarito/vim-slim'
  Bundle 'clang-complete'
  Bundle 'eraserhd/vim-ios'
+ Bundle 'mojo.vim'
+
 
 filetype plugin indent on
 

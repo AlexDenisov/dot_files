@@ -1,18 +1,14 @@
+ZSH=~/.oh-my-zsh
 ZSH_THEME="muse"
 alias zshconfig="vim ~/.zshrc"
 DISABLE_AUTO_UPDATE="true"
-plugins=(git rvm ruby pod)
+plugins=(git rbenv ruby pod gem hub)
 source $ZSH/oh-my-zsh.sh
 
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
-
-export PATH=/usr/local/Cellar/subversion/1.7.7/bin/:$PATH
+export PATH=~/.rbenv/shims:/usr/bin:/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+export PATH=~/.git-scripts:$PATH
 
 . ~/.dotfiles/aliases
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-rvm use 1.9.3 > /dev/null
 
 export EDITOR=vim
 
@@ -22,4 +18,6 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 
 export PAGER="most"
 
-source ~/perl5/perlbrew/etc/bashrc
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+export LANG=en_US 
