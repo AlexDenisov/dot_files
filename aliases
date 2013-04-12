@@ -5,7 +5,6 @@ alias ios='cd ~/Projects/iOS'
 alias tmp='cd /tmp'
 alias vt='cd /var/tmp'
 alias snip='~/Library/Developer/Xcode/UserData/CodeSnippets'
-alias snippets_sync='~/Library/Developer/Xcode/UserData/CodeSnippets && git add . && git commit -am "snippets added" && git pull origin master && git push origin master; cd $OLDPWD'
 
 alias ..='cd ..'
 alias ...='cd ../..';
@@ -13,35 +12,10 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
-# Subversion helpers
-
-alias subadd="svn st | grep '^?' | sed 's/^? *\(.*\)/\"\1\"/g' | sed 's/@\(.*\)/@\1@/g' | xargs svn add"
-alias subrm="svn st | grep '^!' | sed 's/^! *\(.*\)/\"\1\"/g' | sed 's/@\(.*\)/@\1@/g' | xargs svn rm"
-alias subst='svn st'
-alias subci='svn ci'
-alias subup='svn up'
-alias sublog='svn log | more'
-
 # github helpers
 
 function clone() {
   git clone $1
-}
-
-# alias helper
-
-function add_alias() {
-  if [ -n "$1" ] && [ -n "$2" ]; then
-    touch ~/.aliases
-    echo "alias $1=\"$2\"" >> ~/.aliases
-    source ~/.zshrc
-  else
-    echo "Usage: add_alias <alias> <command>"
-  fi
-}
-
-function search_repo() {
- open "https://github.com/search?q=$1&type=Repositories"
 }
 
 pretty() { pygmentize -f terminal "$1" | less -R }
