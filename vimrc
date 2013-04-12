@@ -107,3 +107,4 @@ map <tab> <C-w><C-w>
  nmap <silent> <C-N> :cn<CR>zv
  nmap <silent> <C-B> :cp<CR>zv
 
+ let g:NERDTreeDirArrows=0
