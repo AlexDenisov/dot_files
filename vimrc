@@ -48,10 +48,10 @@ set nu
 
 if has('gui_running')
   set transparency=15
+endif
+
   autocmd VimEnter * TagbarToggle
   autocmd VimEnter * NERDTree
-" python from powerline.ext.vim import source_plugin; source_plugin();
-endif
 
 " nnoremap <F3> :NumbersToggle<CR>
 noremap <F5> :GundoToggle<CR>
