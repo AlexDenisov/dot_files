@@ -30,6 +30,8 @@
  Bundle 'clang-complete'
  Bundle 'eraserhd/vim-ios'
  Bundle 'mojo.vim'
+ Bundle 'rdavison/clavim'
+ Bundle 'trapd00r/neverland-vim-theme'
 
 
 filetype plugin indent on
